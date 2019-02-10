@@ -52,10 +52,19 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CreateTaskForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateTaskForm.Designer.cs">
+      <DependentUpon>CreateTaskForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateTaskForm.resx">
+      <DependentUpon>CreateTaskForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

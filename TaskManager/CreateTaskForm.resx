@@ -118,40 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnNewTask.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAS9JREFUSEvt
-        lUtuwkAQRL2LxE24SQwSUiITBX+SrJxLhBtwRqQgEKzYgvg51aPqCRk8E34rxJNKuLtragbLhuiOkud5
-        L8uyeZqmXbauR1mWDYSPoQpaYbMOR5eDEz8jsF8URRPhU24y4/gyEF4gbMPQATf5hhJafsEp2hgMafZp
-        g9BX8eM6gVZ7swqzrziOH0ygCwyjfXONbDgO8ya1M1+g/2jC6lAjSy9nhQtqZlkL5u/Q6eGCLmB5AGYS
-        vlWfCLdsic+YljC6iOUf0A+G4xv0jDGELmRpQdAH+qHwT1zvjDmELmZpQc+952uEvnBs5yz9aABLi/ZF
-        cnKoxZHBt+4An1H7kLxUT2xbdM7Sz9FGh/sG/3LKBvqHcY5GjPGDZ1t+rifOwmM0dh/dWyKKfgAtl1c5
-        iHi7gAAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="BtnUpdate.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAahJREFUSEvt
-        lbtKA0EYhWMnXoIgWFhZqIWFoJBOEcTLEwRyJ6TIK1gJUVB8BcELKNiIYCEWgkWw8BFEQaxFo6CN2Oj3
-        xzMSncwKamHhB4fd/f8zZzczu5PYPz8mk8nMZrPZdXSBbtEdukJbuVxuGkvLm/MN/HM6jYaAIXSKXr5Q
-        lRv12xiOFavVA6JIp9MTGO8VcK2BiXw+35NKpXrpj3G9jGry1HjyDZ1H36BQKAxismkw8w6h7Wp50I+j
-        Q3nfpXZzMFRl3OXyw/w2gydfdMFOavnYosl0g+IqB3Fz/llq+zBgzQwc51UKEgo3yeLDzz03A4s4rNLv
-        Qvij3SCZTHao9HcolUqdmqIHlX4Xvo8R3eBMJR8ZPLGgK7IEcYvOcVUln8/BGlBRO0ixWOzCa/vUCx/m
-        pMo+jcHSglpRtODbMz9v4bFqzWkIdjqwxVPbg22lG8++vDV+bX3TCyKjaRO5/cg2siUGjzIVreVyuY1a
-        QluE89zSH1dMGDO7OSdggPMTBQSF74g3qK8e8BUuvAGb3xm0jexP5pnAJ46XeNc4n5Lvn+8Si70CAxkv
-        u5c6SLwAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="btnDelete.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAPtJREFUSEvt
-        kc2pwlAUhLPWSrQELUE78GeZP3iuAlnagi1oCVqClqAl6Ma3z9s9R5mzuUbnBARBHBi4TM535nITffUS
-        ZVlWwv+BS35upppFjcw1j1UHNTHXvFm4SRXezOGKuBaGTwHs8ZG4FoYPAezxnrgWhncGMrr9fB7vzvSW
-        kRaGNwYy8hSsGWlheGUgI0/BkpFWmqYLAxnJgivDSAvDcwMZeQrmjLQwPDOQkSyAfxhpoWBiICNPwZiR
-        FgqGBjLyFAwYaaGgbyAjWZDneY+RVpIkXQO9RkGHuFZRFG1Af+GSJ67iOG4R9wk3mgL8DRbV+YwnHRH7
-        OEXRBbh4m9ikIp01AAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="btnSave.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAMJJREFUSEvt
@@ -159,6 +125,18 @@
         sRJht/sQln/B6gDv2N3z9yGlvAerA7xjl+dNtDLv2OV5kyEZDHVa8kxwrqYlzwTnalryTHCuhiVr7QXj
         LvnVvHIX4xqVJKDqqiQBVVclCai6KklA1VVJAqouSymlG8ZdnHN37mJck5cri5NZcK4GP5ytKIxkzd/E
         A+dONBjzBc7eo2YCxnTQAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnClose.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAW5JREFUSEvd
+        VUlOw0AQDAfgMYCA5BsICSSD4AHe/QFyhAP8ggs8CAmxCc6QGJDgwC2hCnqSmUnHOEI+QEmltLuqu+2Z
+        id363yiKYjFN090kSU7jOL5A/EgyZo5aEAQLYp8NKN5Gkwdw+APvMXBLymphDgVHSqMqDsBD1n63qACa
+        n3jFs/BY2uiAYRPk3WjFdTjADW5IOxfcLBjuvIIeuA/2rZwhc5p2G4bhvLQdA5N3POMQG71HDb9ruC4t
+        rYyiaJUaYg5x6sCAmgMMOFeMPeSXRV/H9TPJmLk8z1foEa/NM+oOkLzxTIZPWZYtiaeDuM2YOWqWb0Q8
+        8RU9DiC8+0aLL2BHrF+DwFfRNL6JdQwkqwZwafwBHKp5SXXAtCUqzZojtpeojWsO1mqu6XEwZZP7PEGi
+        T2yycroMJzcZRc0e08b/aATE5l4VBliOrlJYlwfSphLNvq4N8CSNfXBGsD+Z4CX4IWT8u0/mH0Gr9QnH
+        nZnm6AkZ1AAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

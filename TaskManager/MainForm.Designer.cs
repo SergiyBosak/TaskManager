@@ -3,14 +3,14 @@
     partial class MainForm
     {
         /// <summary>
-        /// Обязательная переменная конструктора.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Освободить все используемые ресурсы.
+        /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">истинно, если управляемый ресурс должен быть удален; иначе ложно.</param>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,205 +20,122 @@
             base.Dispose(disposing);
         }
 
-        #region Код, автоматически созданный конструктором форм Windows
+        #region Windows Form Designer generated code
 
         /// <summary>
-        /// Требуемый метод для поддержки конструктора — не изменяйте 
-        /// содержимое этого метода с помощью редактора кода.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            this.cBEmployee = new System.Windows.Forms.ComboBox();
-            this.lEmployee = new System.Windows.Forms.Label();
-            this.dTPGreateDate = new System.Windows.Forms.DateTimePicker();
-            this.lGreateDate = new System.Windows.Forms.Label();
-            this.cBDifficult = new System.Windows.Forms.ComboBox();
-            this.lDifficult = new System.Windows.Forms.Label();
-            this.lTitle = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.gBParam = new System.Windows.Forms.GroupBox();
-            this.tBBody = new System.Windows.Forms.TextBox();
-            this.lBody = new System.Windows.Forms.Label();
-            this.lComment = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.btnNewTask = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.BtnUpdate = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.gBParam.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // cBEmployee
+            // btnNewTask
             // 
-            this.cBEmployee.FormattingEnabled = true;
-            this.cBEmployee.Location = new System.Drawing.Point(7, 39);
-            this.cBEmployee.Name = "cBEmployee";
-            this.cBEmployee.Size = new System.Drawing.Size(137, 21);
-            this.cBEmployee.TabIndex = 0;
+            this.btnNewTask.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNewTask.Image = ((System.Drawing.Image)(resources.GetObject("btnNewTask.Image")));
+            this.btnNewTask.Location = new System.Drawing.Point(805, 12);
+            this.btnNewTask.Name = "btnNewTask";
+            this.btnNewTask.Size = new System.Drawing.Size(39, 35);
+            this.btnNewTask.TabIndex = 0;
+            this.btnNewTask.UseVisualStyleBackColor = true;
+            this.btnNewTask.Click += new System.EventHandler(this.btnNewTask_Click);
             // 
-            // lEmployee
+            // dataGridView1
             // 
-            this.lEmployee.AutoSize = true;
-            this.lEmployee.Location = new System.Drawing.Point(12, 23);
-            this.lEmployee.Name = "lEmployee";
-            this.lEmployee.Size = new System.Drawing.Size(107, 13);
-            this.lEmployee.TabIndex = 1;
-            this.lEmployee.Text = "Выбрать работника";
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 30;
+            this.dataGridView1.Size = new System.Drawing.Size(788, 367);
+            this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
+            this.dataGridView1.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dataGridView1_RowsAdded);
+            this.dataGridView1.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dataGridView1_RowsRemoved);
             // 
-            // dTPGreateDate
+            // BtnUpdate
             // 
-            this.dTPGreateDate.Location = new System.Drawing.Point(7, 84);
-            this.dTPGreateDate.Name = "dTPGreateDate";
-            this.dTPGreateDate.Size = new System.Drawing.Size(137, 20);
-            this.dTPGreateDate.TabIndex = 2;
+            this.BtnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("BtnUpdate.Image")));
+            this.BtnUpdate.Location = new System.Drawing.Point(805, 53);
+            this.BtnUpdate.Name = "BtnUpdate";
+            this.BtnUpdate.Size = new System.Drawing.Size(39, 36);
+            this.BtnUpdate.TabIndex = 2;
+            this.BtnUpdate.UseVisualStyleBackColor = true;
+            this.BtnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
             // 
-            // lGreateDate
+            // btnDelete
             // 
-            this.lGreateDate.AutoSize = true;
-            this.lGreateDate.Location = new System.Drawing.Point(12, 68);
-            this.lGreateDate.Name = "lGreateDate";
-            this.lGreateDate.Size = new System.Drawing.Size(33, 13);
-            this.lGreateDate.TabIndex = 3;
-            this.lGreateDate.Text = "Дата";
-            // 
-            // cBDifficult
-            // 
-            this.cBDifficult.FormattingEnabled = true;
-            this.cBDifficult.Location = new System.Drawing.Point(7, 131);
-            this.cBDifficult.Name = "cBDifficult";
-            this.cBDifficult.Size = new System.Drawing.Size(137, 21);
-            this.cBDifficult.TabIndex = 4;
-            // 
-            // lDifficult
-            // 
-            this.lDifficult.AutoSize = true;
-            this.lDifficult.Location = new System.Drawing.Point(12, 115);
-            this.lDifficult.Name = "lDifficult";
-            this.lDifficult.Size = new System.Drawing.Size(63, 13);
-            this.lDifficult.TabIndex = 5;
-            this.lDifficult.Text = "Сложность";
-            // 
-            // lTitle
-            // 
-            this.lTitle.AutoSize = true;
-            this.lTitle.Location = new System.Drawing.Point(116, 16);
-            this.lTitle.Name = "lTitle";
-            this.lTitle.Size = new System.Drawing.Size(106, 13);
-            this.lTitle.TabIndex = 6;
-            this.lTitle.Text = "Заголовок задания";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(13, 32);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(325, 20);
-            this.textBox1.TabIndex = 7;
-            // 
-            // gBParam
-            // 
-            this.gBParam.Controls.Add(this.lEmployee);
-            this.gBParam.Controls.Add(this.cBEmployee);
-            this.gBParam.Controls.Add(this.dTPGreateDate);
-            this.gBParam.Controls.Add(this.lDifficult);
-            this.gBParam.Controls.Add(this.lGreateDate);
-            this.gBParam.Controls.Add(this.cBDifficult);
-            this.gBParam.Location = new System.Drawing.Point(355, 18);
-            this.gBParam.Name = "gBParam";
-            this.gBParam.Size = new System.Drawing.Size(151, 162);
-            this.gBParam.TabIndex = 8;
-            this.gBParam.TabStop = false;
-            this.gBParam.Text = "Параметры";
-            // 
-            // tBBody
-            // 
-            this.tBBody.Location = new System.Drawing.Point(13, 71);
-            this.tBBody.Multiline = true;
-            this.tBBody.Name = "tBBody";
-            this.tBBody.Size = new System.Drawing.Size(325, 104);
-            this.tBBody.TabIndex = 9;
-            // 
-            // lBody
-            // 
-            this.lBody.AutoSize = true;
-            this.lBody.Location = new System.Drawing.Point(128, 55);
-            this.lBody.Name = "lBody";
-            this.lBody.Size = new System.Drawing.Size(82, 13);
-            this.lBody.TabIndex = 10;
-            this.lBody.Text = "Текст задания";
-            // 
-            // lComment
-            // 
-            this.lComment.AutoSize = true;
-            this.lComment.Location = new System.Drawing.Point(133, 181);
-            this.lComment.Name = "lComment";
-            this.lComment.Size = new System.Drawing.Size(77, 13);
-            this.lComment.TabIndex = 11;
-            this.lComment.Text = "Комментарии";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(13, 197);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(325, 56);
-            this.textBox2.TabIndex = 12;
+            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
+            this.btnDelete.Location = new System.Drawing.Point(805, 95);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(39, 36);
+            this.btnDelete.TabIndex = 3;
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(355, 197);
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
+            this.btnSave.Location = new System.Drawing.Point(805, 137);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(151, 22);
-            this.btnSave.TabIndex = 13;
-            this.btnSave.Text = "Сохранить";
+            this.btnSave.Size = new System.Drawing.Size(39, 36);
+            this.btnSave.TabIndex = 4;
             this.btnSave.UseVisualStyleBackColor = true;
-            // 
-            // btnClear
-            // 
-            this.btnClear.Location = new System.Drawing.Point(355, 228);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(151, 23);
-            this.btnClear.TabIndex = 14;
-            this.btnClear.Text = "Очистить всё";
-            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(514, 269);
-            this.Controls.Add(this.btnClear);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(849, 391);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.lComment);
-            this.Controls.Add(this.lBody);
-            this.Controls.Add(this.tBBody);
-            this.Controls.Add(this.gBParam);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.lTitle);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.BtnUpdate);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btnNewTask);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.Text = "TaskManager";
-            this.gBParam.ResumeLayout(false);
-            this.gBParam.PerformLayout();
+            this.Load += new System.EventHandler(this.MainForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ComboBox cBEmployee;
-        private System.Windows.Forms.Label lEmployee;
-        private System.Windows.Forms.DateTimePicker dTPGreateDate;
-        private System.Windows.Forms.Label lGreateDate;
-        private System.Windows.Forms.ComboBox cBDifficult;
-        private System.Windows.Forms.Label lDifficult;
-        private System.Windows.Forms.Label lTitle;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.GroupBox gBParam;
-        private System.Windows.Forms.TextBox tBBody;
-        private System.Windows.Forms.Label lBody;
-        private System.Windows.Forms.Label lComment;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button btnNewTask;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button BtnUpdate;
+        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnClear;
     }
 }
-
