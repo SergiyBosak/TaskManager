@@ -78,13 +78,53 @@ namespace TaskManager
                 adapterTasks.Fill(ds, "Tasks");
 
                 adapterEmployees.Fill(ds, "Employees");
-
+                
                 ds.Relations.Add(new DataRelation("Relation", ds.Tables["Employees"].Columns["Id"], ds.Tables["Tasks"].Columns["Employee"]));
 
                 dontToggleSaveButton = true;
 
                 dataGridView1.DataSource = ds.Tables["Tasks"];
 
+                var column = dataGridView1.Columns["Работник"] as DataGridViewComboBoxColumn;
+                if (column != null)
+                {
+                    column.DataSource = ds.Tables["Employees"];
+                }
+
+                dontToggleSaveButton = false;
+            }
+
+            setButtonSaveState(false);
+        }
+
+        public void TableRefreshNewEmployees()
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                ds = new DataSet();
+
+                adapterTasks = new SqlDataAdapter(new SqlCommand("SELECT * FROM Tasks", connection));
+
+                adapterEmployees = new SqlDataAdapter(new SqlCommand("SELECT * FROM Employees", connection));
+
+                adapterTasks.Fill(ds, "Tasks");
+
+                adapterEmployees.Fill(ds, "Employees");
+
+                ds.Relations.Add(new DataRelation("Relation", ds.Tables["Employees"].Columns["Id"], ds.Tables["Tasks"].Columns["Employee"]));
+
+                dontToggleSaveButton = true; 
+
+                dataGridView1.DataSource = ds.Tables["Tasks"];
+
+                var column = dataGridView1.Columns["Работник"] as DataGridViewComboBoxColumn;
+                if (column != null)
+                {
+                    column.DataSource = ds.Tables["Employees"];
+                }               
+               
                 dontToggleSaveButton = false;
             }
 
@@ -163,7 +203,7 @@ namespace TaskManager
         {
             int rowIndex = elementClickData.RowIndex;
 
-            if (rowIndex == -1)
+            if (rowIndex < 0)
             {
                 return;
             }
@@ -233,6 +273,80 @@ namespace TaskManager
         private void MainForm_Load(object sender, EventArgs e)
         {
             btnSave.Enabled = false;
+
+            new ToolTip().SetToolTip(btnNewTask, "Создать задание");
+
+            new ToolTip().SetToolTip(BtnUpdate, "Обновить данные");
+
+            new ToolTip().SetToolTip(btnDelete, "Удалить задание");
+
+            new ToolTip().SetToolTip(btnSave, "Сохранить изменения");
+
+            new ToolTip().SetToolTip(btnCopy, "Создать копию");
+
+            new ToolTip().SetToolTip(btnEmployeeSetting, "Редактор работников");
+        }
+
+        private void btnCopy_Click(object sender, EventArgs e)
+        {
+            CreateTaskForm TaskFormInfo = new CreateTaskForm();
+
+            CreateTaskForm.Parameters parameters;
+
+            foreach (DataGridViewRow rows in dataGridView1.SelectedRows)
+            {
+                int rowIndex = dataGridView1.Rows.IndexOf(rows);
+
+                if (rowIndex < 0)
+                {
+                    return;
+                }
+                
+                TaskFormInfo.EmploueeOld = (int)dataGridView1["Employee", rowIndex].Value;
+
+                parameters.TaskId = (int)(long)dataGridView1["Id", rowIndex].Value;
+                parameters.EmployeeId = 1;//(int)dataGridView1["Employee", rowIndex].Value;
+                parameters.IsComplete = (bool)dataGridView1["IsComplete", rowIndex].Value;
+                parameters.CreateDate = (DateTime)dataGridView1["CreateDate", rowIndex].Value;
+                parameters.Title = (string)dataGridView1["Title", rowIndex].Value;
+                parameters.Difficult = (int)(decimal)dataGridView1["Difficult", rowIndex].Value;
+                parameters.Body = (string)dataGridView1["Body", rowIndex].Value;
+                parameters.Comment = (string)dataGridView1["Comment", rowIndex].Value;
+
+                TaskFormInfo.Fill(parameters);
+
+                TaskFormInfo.ShowDialog();
+
+                parameters = TaskFormInfo.GetParameters();
+
+                if (TaskFormInfo.DialogResult == DialogResult.No)
+                {
+                    TableRefresh();
+
+                    DataRow row = ds.Tables[0].NewRow();
+                    ds.Tables[0].Rows.Add(row);
+
+                    rowIndex = ds.Tables[0].Rows.IndexOf(row);
+
+                    dataGridView1["Id", rowIndex].Value = parameters.TaskId;
+                    dataGridView1["Employee", rowIndex].Value = parameters.EmployeeId;
+                    dataGridView1["IsComplete", rowIndex].Value = parameters.IsComplete;
+                    dataGridView1["CreateDate", rowIndex].Value = parameters.CreateDate;
+                    dataGridView1["Title", rowIndex].Value = parameters.Title;
+                    dataGridView1["Difficult", rowIndex].Value = parameters.Difficult;
+                    dataGridView1["Body", rowIndex].Value = parameters.Body;
+                    dataGridView1["Comment", rowIndex].Value = parameters.Comment;
+                }
+            }
+        }
+
+        private void btmEmployeeSetting_Click(object sender, EventArgs e)
+        {
+            EmployeeSettingForm employeeSettingForm = new EmployeeSettingForm();
+
+            employeeSettingForm.ShowDialog();
+
+            TableRefresh();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -247,10 +361,10 @@ namespace TaskManager
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.AllowUserToAddRows = false;
 
+            DataGridViewComboBoxColumn column = new DataGridViewComboBoxColumn();
+
             dataGridView1.Columns["Employee"].Visible = false;
-
-            var column = new DataGridViewComboBoxColumn();
-
+        
             column.Name = "Работник";
 
             column.DataSource = ds.Tables["Employees"];
@@ -262,9 +376,10 @@ namespace TaskManager
 
             dataGridView1.Columns.Insert(0, column);
 
-            dataGridView1.Columns["Body"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            //dataGridView1.Columns["Body"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dataGridView1.Columns["Body"].HeaderText = "Текст задания";
             dataGridView1.Columns["Body"].ReadOnly = true;
+            dataGridView1.Columns["Body"].Width = 230;
 
             dataGridView1.Columns["Difficult"].HeaderText = "Сложность";
             dataGridView1.Columns["Difficult"].Width = 80;
@@ -273,22 +388,26 @@ namespace TaskManager
             dataGridView1.Columns["IsComplete"].HeaderText = "Статус выполнения";
             dataGridView1.Columns["IsComplete"].Width = 80;
 
-            dataGridView1.Columns["Работник"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            //dataGridView1.Columns["Работник"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
 
-            dataGridView1.Columns["CreateDate"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            //dataGridView1.Columns["CreateDate"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dataGridView1.Columns["CreateDate"].HeaderText = "Дата создания";
             dataGridView1.Columns["CreateDate"].ReadOnly = true;
 
-            dataGridView1.Columns["Title"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            //dataGridView1.Columns["Title"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dataGridView1.Columns["Title"].HeaderText = "Заголовок задания";
             dataGridView1.Columns["Title"].ReadOnly = true;
+            dataGridView1.Columns["Title"].Width = 120;
 
-            dataGridView1.Columns["Comment"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            //dataGridView1.Columns["Comment"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dataGridView1.Columns["Comment"].HeaderText = "Комментарии";
+            dataGridView1.Columns["Comment"].Width = 120;
 
             dataGridView1.Columns["FillColumn"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
             dataGridView1.Columns["FillColumn"].ReadOnly = true;
+
+            //dataGridView1.Columns["FillColumn"].Visible = false;
 
             dataGridView1.Columns["FillColumn"].HeaderText = string.Empty;
 

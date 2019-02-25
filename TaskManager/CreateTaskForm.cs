@@ -14,6 +14,8 @@ namespace TaskManager
 {
     public partial class CreateTaskForm : Form
     {
+        public int EmploueeOld { get; set; }
+
         public struct Parameters
         {
             public int TaskId;
@@ -39,7 +41,7 @@ namespace TaskManager
                 }
                 if (EmployeeId < 2)
                 {
-                    errors += "Работник: выберите работника \n";
+                    errors += "Выберите работника \n";
                 }
                 if (Difficult < 1 || Difficult > 5)
                 {
@@ -66,7 +68,7 @@ namespace TaskManager
         {
             InitializeComponent();
 
-            initialize();            
+            initialize();
         }
 
         public void Fill(Parameters parameters)
@@ -100,7 +102,7 @@ namespace TaskManager
             if (rBComplete.Checked)
                 parameters.IsComplete = true;
             else
-                parameters.IsComplete = false;           
+                parameters.IsComplete = false;
 
             return parameters;
         }
@@ -124,9 +126,8 @@ namespace TaskManager
             }
 
             cBDifficult.Items.AddRange(new string[] { "Не выбрано", "1", "2", "3", "4", "5" });
-            
-            rBDevelop.Checked = true;
-            cBDifficult.SelectedIndex = 0;                       
+
+            cBDifficult.SelectedIndex = 0;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -138,12 +139,18 @@ namespace TaskManager
                 return;
             }
 
+            if (this.EmploueeOld == parameters.EmployeeId)
+            {
+                MessageBox.Show("Задание для данного работника уже существует, выберете другого работника", "Не верно выбраны данные", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             if (!EditMode)
             {
                 this.DialogResult = DialogResult.No;                
             }
             else
-            {
+            {               
                 this.DialogResult = DialogResult.OK;
 
                 Close();
@@ -170,7 +177,29 @@ namespace TaskManager
 
         private void GreateTaskForm_Load(object sender, EventArgs e)
         {
-            
+            if (!EditMode)
+            {
+                rBDevelop.Checked = true;
+                rBComplete.Enabled = false;
+                rBDevelop.Enabled = false;
+            }
+
+            if (EditMode && rBComplete.Checked == true)
+            {
+                tBTitle.ReadOnly = true;
+                tBBody.ReadOnly = true;
+                dTPGreateDate.Enabled = false;
+                rBComplete.Enabled = false;
+                rBDevelop.Enabled = false;
+                cBEmployee.Enabled = false;
+                cBDifficult.Enabled = false;
+                btnSave.Enabled = false;
+            }
+
+            if (EditMode)
+            {
+                cBEmployee.Enabled = false;
+            }           
         }
 
         private void btnClose_Click(object sender, EventArgs e)

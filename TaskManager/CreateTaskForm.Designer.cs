@@ -58,7 +58,7 @@
             this.cBEmployee.Location = new System.Drawing.Point(7, 39);
             this.cBEmployee.Name = "cBEmployee";
             this.cBEmployee.Size = new System.Drawing.Size(137, 21);
-            this.cBEmployee.TabIndex = 0;
+            this.cBEmployee.TabIndex = 1;
             // 
             // lEmployee
             // 
@@ -66,7 +66,7 @@
             this.lEmployee.Location = new System.Drawing.Point(12, 23);
             this.lEmployee.Name = "lEmployee";
             this.lEmployee.Size = new System.Drawing.Size(107, 13);
-            this.lEmployee.TabIndex = 1;
+            this.lEmployee.TabIndex = 0;
             this.lEmployee.Text = "Выбрать работника";
             // 
             // dTPGreateDate
@@ -74,7 +74,7 @@
             this.dTPGreateDate.Location = new System.Drawing.Point(7, 80);
             this.dTPGreateDate.Name = "dTPGreateDate";
             this.dTPGreateDate.Size = new System.Drawing.Size(137, 20);
-            this.dTPGreateDate.TabIndex = 2;
+            this.dTPGreateDate.TabIndex = 3;
             // 
             // lGreateDate
             // 
@@ -82,7 +82,7 @@
             this.lGreateDate.Location = new System.Drawing.Point(12, 64);
             this.lGreateDate.Name = "lGreateDate";
             this.lGreateDate.Size = new System.Drawing.Size(33, 13);
-            this.lGreateDate.TabIndex = 3;
+            this.lGreateDate.TabIndex = 2;
             this.lGreateDate.Text = "Дата";
             // 
             // cBDifficult
@@ -92,7 +92,7 @@
             this.cBDifficult.Location = new System.Drawing.Point(7, 122);
             this.cBDifficult.Name = "cBDifficult";
             this.cBDifficult.Size = new System.Drawing.Size(137, 21);
-            this.cBDifficult.TabIndex = 4;
+            this.cBDifficult.TabIndex = 5;
             // 
             // lDifficult
             // 
@@ -100,7 +100,7 @@
             this.lDifficult.Location = new System.Drawing.Point(12, 106);
             this.lDifficult.Name = "lDifficult";
             this.lDifficult.Size = new System.Drawing.Size(63, 13);
-            this.lDifficult.TabIndex = 5;
+            this.lDifficult.TabIndex = 4;
             this.lDifficult.Text = "Сложность";
             // 
             // lTitle
@@ -121,8 +121,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tBTitle.Location = new System.Drawing.Point(13, 32);
             this.tBTitle.Name = "tBTitle";
-            this.tBTitle.Size = new System.Drawing.Size(339, 20);
-            this.tBTitle.TabIndex = 7;
+            this.tBTitle.Size = new System.Drawing.Size(337, 20);
+            this.tBTitle.TabIndex = 1;
             // 
             // gBParam
             // 
@@ -133,10 +133,10 @@
             this.gBParam.Controls.Add(this.lDifficult);
             this.gBParam.Controls.Add(this.lGreateDate);
             this.gBParam.Controls.Add(this.cBDifficult);
-            this.gBParam.Location = new System.Drawing.Point(369, 18);
+            this.gBParam.Location = new System.Drawing.Point(367, 18);
             this.gBParam.Name = "gBParam";
             this.gBParam.Size = new System.Drawing.Size(151, 157);
-            this.gBParam.TabIndex = 8;
+            this.gBParam.TabIndex = 6;
             this.gBParam.TabStop = false;
             this.gBParam.Text = "Параметры";
             // 
@@ -148,8 +148,8 @@
             this.tBBody.Location = new System.Drawing.Point(13, 72);
             this.tBBody.Multiline = true;
             this.tBBody.Name = "tBBody";
-            this.tBBody.Size = new System.Drawing.Size(339, 180);
-            this.tBBody.TabIndex = 9;
+            this.tBBody.Size = new System.Drawing.Size(337, 179);
+            this.tBBody.TabIndex = 3;
             // 
             // lBody
             // 
@@ -160,7 +160,7 @@
             this.lBody.Location = new System.Drawing.Point(128, 56);
             this.lBody.Name = "lBody";
             this.lBody.Size = new System.Drawing.Size(82, 13);
-            this.lBody.TabIndex = 4;
+            this.lBody.TabIndex = 2;
             this.lBody.Text = "Текст задания";
             this.lBody.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -169,10 +169,10 @@
             this.lComment.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lComment.AutoSize = true;
-            this.lComment.Location = new System.Drawing.Point(133, 255);
+            this.lComment.Location = new System.Drawing.Point(133, 254);
             this.lComment.Name = "lComment";
             this.lComment.Size = new System.Drawing.Size(77, 13);
-            this.lComment.TabIndex = 11;
+            this.lComment.TabIndex = 4;
             this.lComment.Text = "Комментарии";
             this.lComment.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -180,21 +180,21 @@
             // 
             this.tBComment.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tBComment.Location = new System.Drawing.Point(13, 271);
+            this.tBComment.Location = new System.Drawing.Point(13, 270);
             this.tBComment.Multiline = true;
             this.tBComment.Name = "tBComment";
-            this.tBComment.Size = new System.Drawing.Size(339, 47);
-            this.tBComment.TabIndex = 12;
+            this.tBComment.Size = new System.Drawing.Size(337, 47);
+            this.tBComment.TabIndex = 5;
             // 
             // btnSave
             // 
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(369, 251);
+            this.btnSave.Location = new System.Drawing.Point(367, 251);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(151, 30);
-            this.btnSave.TabIndex = 13;
+            this.btnSave.TabIndex = 8;
             this.btnSave.Text = "Сохранить";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -205,7 +205,7 @@
             this.rBDevelop.Location = new System.Drawing.Point(6, 18);
             this.rBDevelop.Name = "rBDevelop";
             this.rBDevelop.Size = new System.Drawing.Size(94, 17);
-            this.rBDevelop.TabIndex = 7;
+            this.rBDevelop.TabIndex = 0;
             this.rBDevelop.TabStop = true;
             this.rBDevelop.Text = "В разработке";
             this.rBDevelop.UseVisualStyleBackColor = true;
@@ -216,7 +216,7 @@
             this.rBComplete.Location = new System.Drawing.Point(6, 38);
             this.rBComplete.Name = "rBComplete";
             this.rBComplete.Size = new System.Drawing.Size(82, 17);
-            this.rBComplete.TabIndex = 8;
+            this.rBComplete.TabIndex = 1;
             this.rBComplete.TabStop = true;
             this.rBComplete.Text = "Завершено";
             this.rBComplete.UseVisualStyleBackColor = true;
@@ -226,10 +226,10 @@
             this.gBIsComplete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.gBIsComplete.Controls.Add(this.rBComplete);
             this.gBIsComplete.Controls.Add(this.rBDevelop);
-            this.gBIsComplete.Location = new System.Drawing.Point(369, 181);
+            this.gBIsComplete.Location = new System.Drawing.Point(367, 181);
             this.gBIsComplete.Name = "gBIsComplete";
             this.gBIsComplete.Size = new System.Drawing.Size(151, 64);
-            this.gBIsComplete.TabIndex = 14;
+            this.gBIsComplete.TabIndex = 7;
             this.gBIsComplete.TabStop = false;
             this.gBIsComplete.Text = "Статус выполнения";
             // 
@@ -238,10 +238,10 @@
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(369, 287);
+            this.btnClose.Location = new System.Drawing.Point(367, 287);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(151, 30);
-            this.btnClose.TabIndex = 15;
+            this.btnClose.TabIndex = 9;
             this.btnClose.Text = "Отмена";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -250,7 +250,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(535, 326);
+            this.ClientSize = new System.Drawing.Size(533, 325);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.gBIsComplete);
             this.Controls.Add(this.btnSave);
@@ -262,8 +262,9 @@
             this.Controls.Add(this.tBTitle);
             this.Controls.Add(this.lTitle);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(500, 360);
             this.Name = "CreateTaskForm";
-            this.Text = "TaskManager";
+            this.Text = "Менеджер заданий";
             this.Load += new System.EventHandler(this.GreateTaskForm_Load);
             this.gBParam.ResumeLayout(false);
             this.gBParam.PerformLayout();
